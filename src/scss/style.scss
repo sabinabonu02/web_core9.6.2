@@ -1,0 +1,25 @@
+$bgColor: #24292e;
+$text: #fff;
+
+@font-face {
+  font-family: 'TTLakes';
+  src: url('../fonts/TTLakes/TTLakes-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style:normal;
+}
+
+@font-face {
+  font-family: 'TTLakes';
+  src: url('../fonts/TTLakes/TTLakes-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style:normal;
+}
+
+body {
+  padding: 1rem;
+  margin: 0;
+  font-family: 'TTLakes', sans-serif;
+  background-color: $bgColor;
+  color: $text;
+}
+
