@@ -1,39 +1,33 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+      name="description"
+      content="Услуги и сервисы по ремонту техники Dell"
     />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>My App</title>
+    <title>Услуги и сервисы</title>
   </head>
+
   <body class="mainPage">
     <header class="header">
       <div class="header_left">
-        <div class="header_button">
-          <img src="./img/menu.svg" alt="Menu Icon" />
-        </div>
-        <div class="header_divider" aria-hidden="true"></div>
-      </div>
-
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>My App</title>
-  </head>
- <body class="mainPage">
-    <header class="header">
-      <div class="header_left">
-        <button class="header_button" type="button" aria-label="Открыть меню">
+        <button
+          class="header_button"
+          id="menu-open"
+          type="button"
+          aria-label="Открыть меню"
+          aria-controls="side-menu"
+          aria-expanded="false"
+        >
           <img src="./img/menu.svg" alt="" />
         </button>
 
-        <div class="header_divider header_divider--tablet" aria-hidden="true"></div>
+        <div
+          class="header_divider header_divider--tablet"
+          aria-hidden="true"
+        ></div>
 
         <a class="header_logo" href="/" aria-label="На главную">
           <img src="./img/logo.svg" alt="" />
@@ -44,27 +38,50 @@
 
       <div class="header_right">
         <div class="tablet">
-          <button class="header_button header_button--tablet" type="button" aria-label="Позвонить">
+          <button
+            class="header_button header_button--tablet"
+            type="button"
+            aria-label="Позвонить"
+          >
             <img src="./img/call.svg" alt="" />
           </button>
 
-          <button class="header_button header_button--tablet" type="button" aria-label="Написать в чат">
+          <button
+            class="header_button header_button--tablet"
+            type="button"
+            aria-label="Написать в чат"
+          >
             <img src="./img/chat.svg" alt="" />
           </button>
 
-          <button class="header_button header_button--tablet" type="button" aria-label="Открыть профиль">
+          <button
+            class="header_button header_button--tablet"
+            type="button"
+            aria-label="Открыть профиль"
+          >
             <img src="./img/profile.svg" alt="" />
           </button>
         </div>
 
-        <div class="header_divider header_divider--tablet" aria-hidden="true"></div>
+        <div
+          class="header_divider header_divider--tablet"
+          aria-hidden="true"
+        ></div>
 
         <div class="all">
-          <button class="header_button" type="button" aria-label="Оставить заявку">
+          <button
+            class="header_button"
+            type="button"
+            aria-label="Оставить заявку"
+          >
             <img src="./img/repair.svg" alt="" />
           </button>
 
-          <button class="header_button" type="button" aria-label="Проверить статус ремонта">
+          <button
+            class="header_button"
+            type="button"
+            aria-label="Проверить статус ремонта"
+          >
             <img src="./img/search.svg" alt="" />
           </button>
         </div>
@@ -106,24 +123,27 @@
       </div>
 
       <nav class="slideMenu" aria-label="Разделы услуг">
-        <button class="slideMenu_item" type="button" aria-current="page">
+        <button
+          class="slideMenu_item slideMenu--active"
+          type="button"
+          aria-current="page"
+        >
           Ремонтируемые бренды
         </button>
+
         <button class="slideMenu_item" type="button">
           Ремонтируемые устройства
         </button>
-        <button class="slideMenu_item" type="button">
-          Цены на услуги
-        </button>
+
+        <button class="slideMenu_item" type="button"> Цены на услуги </button>
+
         <button class="slideMenu_item" type="button">
           Адреса сервисных центров
         </button>
-        <button class="slideMenu_item" type="button">
-          Специальные цены
-        </button>
-        <button class="slideMenu_item" type="button">
-          Отзывы
-        </button>
+
+        <button class="slideMenu_item" type="button"> Специальные цены </button>
+
+        <button class="slideMenu_item" type="button"> Отзывы </button>
       </nav>
 
       <section class="services_content" aria-label="О сервисном центре">
@@ -155,91 +175,89 @@
         </div>
       </section>
     </main>
-  </body>
-</html>
-r header_divider--tablet"></div>
-        <div class="header_logo">
-          <img src="./img/logo.svg" alt="Logo" />
+
+    <button
+      class="menu-overlay"
+      id="menu-overlay"
+      type="button"
+      aria-label="Закрыть меню"
+      hidden
+    ></button>
+
+    <aside
+      class="side-menu"
+      id="side-menu"
+      aria-label="Боковое меню"
+      aria-hidden="true"
+      inert
+    >
+      <header class="menu-header">
+        <div class="menu-header-left">
+          <button
+            class="menu-button"
+            id="menu-close"
+            type="button"
+            aria-label="Закрыть меню"
+          >
+            <img src="./img/exit.svg" alt="" />
+          </button>
+
+          <a class="logo" href="/" aria-label="На главную">
+            <img src="./img/logo.svg" alt="" />
+          </a>
         </div>
-        <div class="header_divider_tablet"></div>
-      </div>
-      <div class="header_right">
-        <!--h-->
-        <div class="tablet">
-          <div class="header_button header_button--tablet">
-            <img src="./img/call.svg" alt="Call Icon" />
-          </div>
-          <div class="header_button header_button--tablet">
-            <img src="./img/chat.svg" alt="Chat Icon" />
-          </div>
-          <div class="header_button header_button--tablet">
-            <img src="./img/profile.svg" alt="Profile Icon" />
-          </div>
-        </div>
-        <div class="header_divider header_divider--tablet"></div>
-        <div class="all">
-          <div class="header_button">
-            <img src="./img/repair.svg" alt="Repair Icon" />
-          </div>
-          <div class="header_button">
-            <img src="./img/search.svg" alt="Search Icon" />
-          </div>
-        </div>
-      </div>
-    </header>
-    <div class="header_shadow"></div>
-    <main class="services">
-      <div class="services_heading">
-        <div class="block">
-          <div class="services_accent"></div>
-          <h1 class="services_title">Услуги и сервисы</h1>
-        </div>
-        <div class="services_actions services_actions--desktop">
-          <div class="services_action1">
-            <span class="services_action-text">Оставить заявку</span>
-            <button class="header_button header_button--desktop">
-              <img src="./img/repair.svg" alt="Repair Icon" />
-            </button>
-          </div>
-          <div class="services_action2">
-            <span class="services_action-text2">Статус ремонта</span>
-            <button class="header_button header_button--desktop">
-              <img src="./img/search.svg" alt="Search Icon" />
-            </button>
-          </div>
-        </div>
-      </div>
-      <nav class="slideMenu">
-        <span class="slideMenu_item slideMenu--active">
-          Ремонтируемые бренды
-        </span>
-        <span class="slideMenu_item"> Ремонтируемые устройства </span>
-        <span class="slideMenu_item"> Цены на услуги </span>
-        <span class="slideMenu_item"> Адреса сервисных центров </span>
-        <span class="slideMenu_item"> Специальные цены </span>
-        <span class="slideMenu_item"> Отзывы </span>
+
+        <button class="menu-button" type="button" aria-label="Поиск">
+          <img src="./img/search.svg" alt="" />
+        </button>
+      </header>
+
+      <nav class="menu" aria-label="Основная навигация">
+        <ul class="menu-list">
+          <li><a href="#">Ремонт техники</a></li>
+          <li><a href="#">Услуги и сервисы</a></li>
+          <li><a href="#">Корпоративным клиентам</a></li>
+          <li><a href="#">Продавцам техники</a></li>
+          <li><a href="#">Партнерам</a></li>
+          <li><a href="#">Производителям</a></li>
+          <li><a href="#">Наши сервисные центры</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
       </nav>
-      <section class="services_content">
-        <div class="services_content-text">
-          <p>
-            Мы являемся авторизованным сервисным центром по ремонту техники
-            Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
-            официальной гарантией производителя.
-            <br /><br />
-            Мы успешно работаем с 1992 года и заслужили репутацию надежного
-            партнера, что подтверждает большое количество постоянных клиентов.
-            Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
-            очередь, советуют нас родным и близким.
-          </p>
-          <button class="services_content-readMore">
-            <img src="./img/readMore.svg" alt="readMore" />
-            Читать далее
+
+      <footer class="menu-footer">
+        <div class="footer-icons">
+          <button class="menu-button" type="button" aria-label="Позвонить">
+            <img src="./img/call.svg" alt="" />
+          </button>
+
+          <button class="menu-button" type="button" aria-label="Написать в чат">
+            <img src="./img/chat.svg" alt="" />
+          </button>
+
+          <button
+            class="menu-button"
+            type="button"
+            aria-label="Открыть профиль"
+          >
+            <img src="./img/profile.svg" alt="" />
           </button>
         </div>
-        <div class="services_image">
-          <img src="./img/servicesImage.svg" alt="Services Image" />
+
+        <a class="email" href="mailto:mail@cps.com">mail@cps.com</a>
+        <a class="tel" href="tel:88008908900">8 800 890 8900</a>
+
+        <div class="lang" aria-label="Язык интерфейса">
+          <input type="radio" name="lang" id="lang-ru" checked />
+          <label for="lang-ru">RU</label>
+
+          <input type="radio" name="lang" id="lang-en" />
+          <label for="lang-en">EN</label>
+
+          <input type="radio" name="lang" id="lang-ch" />
+          <label for="lang-ch">CH</label>
         </div>
-      </section>
-    </main>
+      </footer>
+    </aside>
   </body>
 </html>
