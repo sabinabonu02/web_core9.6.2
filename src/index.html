@@ -7,17 +7,159 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <title>My App</title>
   </head>
   <body class="mainPage">
     <header class="header">
       <div class="header_left">
         <div class="header_button">
-          <img src="../src/img/menu.svg" alt="Menu Icon" />
+          <img src="./img/menu.svg" alt="Menu Icon" />
         </div>
-        <div class="header_divider header_divider--tablet"></div>
+        <div class="header_divider" aria-hidden="true"></div>
+      </div>
+
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My App</title>
+  </head>
+ <body class="mainPage">
+    <header class="header">
+      <div class="header_left">
+        <button class="header_button" type="button" aria-label="Открыть меню">
+          <img src="./img/menu.svg" alt="" />
+        </button>
+
+        <div class="header_divider header_divider--tablet" aria-hidden="true"></div>
+
+        <a class="header_logo" href="/" aria-label="На главную">
+          <img src="./img/logo.svg" alt="" />
+        </a>
+
+        <div class="header_divider_tablet" aria-hidden="true"></div>
+      </div>
+
+      <div class="header_right">
+        <div class="tablet">
+          <button class="header_button header_button--tablet" type="button" aria-label="Позвонить">
+            <img src="./img/call.svg" alt="" />
+          </button>
+
+          <button class="header_button header_button--tablet" type="button" aria-label="Написать в чат">
+            <img src="./img/chat.svg" alt="" />
+          </button>
+
+          <button class="header_button header_button--tablet" type="button" aria-label="Открыть профиль">
+            <img src="./img/profile.svg" alt="" />
+          </button>
+        </div>
+
+        <div class="header_divider header_divider--tablet" aria-hidden="true"></div>
+
+        <div class="all">
+          <button class="header_button" type="button" aria-label="Оставить заявку">
+            <img src="./img/repair.svg" alt="" />
+          </button>
+
+          <button class="header_button" type="button" aria-label="Проверить статус ремонта">
+            <img src="./img/search.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="header_shadow" aria-hidden="true"></div>
+
+    <main class="services">
+      <div class="services_heading">
+        <div class="block">
+          <div class="services_accent" aria-hidden="true"></div>
+          <h1 class="services_title">Услуги и сервисы</h1>
+        </div>
+
+        <div class="services_actions services_actions--desktop">
+          <div class="services_action1">
+            <span class="services_action-text">Оставить заявку</span>
+            <button
+              class="header_button header_button--desktop"
+              type="button"
+              aria-label="Оставить заявку"
+            >
+              <img src="./img/repair.svg" alt="" />
+            </button>
+          </div>
+
+          <div class="services_action2">
+            <span class="services_action-text2">Статус ремонта</span>
+            <button
+              class="header_button header_button--desktop"
+              type="button"
+              aria-label="Проверить статус ремонта"
+            >
+              <img src="./img/search.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <nav class="slideMenu" aria-label="Разделы услуг">
+        <button class="slideMenu_item" type="button" aria-current="page">
+          Ремонтируемые бренды
+        </button>
+        <button class="slideMenu_item" type="button">
+          Ремонтируемые устройства
+        </button>
+        <button class="slideMenu_item" type="button">
+          Цены на услуги
+        </button>
+        <button class="slideMenu_item" type="button">
+          Адреса сервисных центров
+        </button>
+        <button class="slideMenu_item" type="button">
+          Специальные цены
+        </button>
+        <button class="slideMenu_item" type="button">
+          Отзывы
+        </button>
+      </nav>
+
+      <section class="services_content" aria-label="О сервисном центре">
+        <div class="services_content-text">
+          <p>
+            Мы являемся авторизованным сервисным центром по ремонту техники
+            Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
+            официальной гарантией производителя.
+          </p>
+
+          <p>
+            Мы успешно работаем с 1992 года и заслужили репутацию надежного
+            партнера, что подтверждает большое количество постоянных клиентов.
+            Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
+            очередь, советуют нас родным и близким.
+          </p>
+
+          <button class="services_content-readMore" type="button">
+            <img src="./img/readMore.svg" alt="" />
+            Читать далее
+          </button>
+        </div>
+
+        <div class="services_image">
+          <img
+            src="./img/servicesImage.svg"
+            alt="Сервисный центр по ремонту техники"
+          />
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+r header_divider--tablet"></div>
         <div class="header_logo">
-          <img src="../src/img/logo.svg" alt="Logo" />
+          <img src="./img/logo.svg" alt="Logo" />
         </div>
         <div class="header_divider_tablet"></div>
       </div>
@@ -25,22 +167,22 @@
         <!--h-->
         <div class="tablet">
           <div class="header_button header_button--tablet">
-            <img src="../src/img/call.svg" alt="Call Icon" />
+            <img src="./img/call.svg" alt="Call Icon" />
           </div>
           <div class="header_button header_button--tablet">
-            <img src="../src/img/chat.svg" alt="Chat Icon" />
+            <img src="./img/chat.svg" alt="Chat Icon" />
           </div>
           <div class="header_button header_button--tablet">
-            <img src="../src/img/profile.svg" alt="Profile Icon" />
+            <img src="./img/profile.svg" alt="Profile Icon" />
           </div>
         </div>
         <div class="header_divider header_divider--tablet"></div>
         <div class="all">
           <div class="header_button">
-            <img src="../src/img/repair.svg" alt="Repair Icon" />
+            <img src="./img/repair.svg" alt="Repair Icon" />
           </div>
           <div class="header_button">
-            <img src="../src/img/search.svg" alt="Search Icon" />
+            <img src="./img/search.svg" alt="Search Icon" />
           </div>
         </div>
       </div>
@@ -56,13 +198,13 @@
           <div class="services_action1">
             <span class="services_action-text">Оставить заявку</span>
             <button class="header_button header_button--desktop">
-              <img src="images/repair.svg" alt="Repair Icon" />
+              <img src="./img/repair.svg" alt="Repair Icon" />
             </button>
           </div>
           <div class="services_action2">
             <span class="services_action-text2">Статус ремонта</span>
             <button class="header_button header_button--desktop">
-              <img src="images/search.svg" alt="Search Icon" />
+              <img src="./img/search.svg" alt="Search Icon" />
             </button>
           </div>
         </div>
@@ -90,12 +232,12 @@
             очередь, советуют нас родным и близким.
           </p>
           <button class="services_content-readMore">
-            <img src="images/readMore.svg" alt="readMore" />
+            <img src="./img/readMore.svg" alt="readMore" />
             Читать далее
           </button>
         </div>
         <div class="services_image">
-          <img src="images/servicesImage.svg" alt="Services Image" />
+          <img src="./img/servicesImage.svg" alt="Services Image" />
         </div>
       </section>
     </main>
