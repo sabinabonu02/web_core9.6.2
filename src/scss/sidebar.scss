@@ -119,6 +119,7 @@ $menu-accent: #41f6d7;
       opacity: 0;
     }
 
+    &.is-active,
     &:focus-within {
       color: $menu-muted;
 
@@ -207,9 +208,15 @@ $menu-accent: #41f6d7;
 @media (min-width: 1440px) {
   .side-menu {
     width: 187px;
-        padding: 24px 12px;
-        transform: translateX(0);
+    padding: 24px 12px;
+    transform: translateX(0);
     visibility: visible;
+    box-shadow: none;
+    border-right: 1px solid #f0f0f0;
+  }
+
+  .menu-list li::before {
+    left: -12px;
   }
 
   .side-menu #menu-close,
@@ -221,6 +228,3 @@ $menu-accent: #41f6d7;
     display: none;
   }
 }
-
-
-

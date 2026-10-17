@@ -7,6 +7,30 @@ const closeButton = document.querySelector('#menu-close')
 const overlay = document.querySelector('#menu-overlay')
 const desktopScreen = window.matchMedia('(min-width: 1440px)')
 
+const menuList = menu.querySelector('.menu-list')
+
+menuList.addEventListener('click', (event) => {
+  const target = event.target
+  const link = target instanceof Element ? target.closest('a') : null
+
+  if (!link || !menuList.contains(link)) return
+
+  // Пока ссылки-заглушки ведут на #, не прокручиваем страницу наверх.
+  if (link.getAttribute('href') === '#') {
+    event.preventDefault()
+  }
+
+  menuList.querySelectorAll('li.is-active').forEach((item) => {
+    item.classList.remove('is-active')
+  })
+  menuList.querySelectorAll('a[aria-current="page"]').forEach((item) => {
+    item.removeAttribute('aria-current')
+  })
+
+  link.closest('li').classList.add('is-active')
+  link.setAttribute('aria-current', 'page')
+})
+
 function showMenu(isDesktop = false) {
   menu.classList.add('is-open')
   menu.setAttribute('aria-hidden', 'false')

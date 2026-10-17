@@ -1,124 +1,73 @@
-# Webpack Static Site Starter Kit
+http://localhost:9000/
+# Сайт сервисного центра CPS
 
-## Требования к проекту
+Адаптивный сайт сервисного центра. Проект собирается с помощью Webpack; стили написаны на SCSS.
 
-- [Node 20.17.0](https://nodejs.org/en/download/package-manager)
-- [NVM для macOS](https://tecadmin.net/install-nvm-macos-with-homebrew/)
-- [NVM для Windows](https://github.com/coreybutler/nvm-windows/releases) (если используется Windows, установка должна выполняться от имени администратора)
-- [Yarn](https://yarnpkg.com/)
+## Требования
 
----
+- Node.js `20.17.0`
+- npm (устанавливается вместе с Node.js)
 
-## Использование
+Проверить активную версию Node.js:
 
-1. Клонируйте репозиторий:
-
-```bash
-git clone https://github.com/Habsida-Projects/webpack-static-template
-```
-
-2. Откройте терминал в папке `webpack-static-template`.
-
-3. Удалите папку `.git` вручную или с помощью команды:
-
-```bash
-rm -rf .git
-```
-
-Существующая папка `.git` связана с репозиторием, из которого вы клонировали проект. Вам нужно создать новую папку `.git`, связанную с вашим собственным репозиторием.
-
----
-
-## Если создаете новый проект на github.com
-
-Необходимо инициализировать новый Git-репозиторий. _Если эта команда не срабатывает, возможно, ваша версия Git устарела, и потребуется обновление._
-
-```properties
-git init -b main
-```
-
-Добавить все изменения и сделать первый коммит
-
-```properties
-git add . && git commit -m "initial commit"
-```
-
-Соединить локальный репозиторий с удаленным, заменив *USER* (на ваше имя пользователя в GitHub) и *REPO* (название вашего репозитория):
-
-```properties
-git remote add origin https://github.com/USER/REPO.git
-```
-
-Проверьте соединение:
-
-```properties
-git remote -v
-```
-
-Выполните отправку изменений в удаленный репозиторий:
-
-```properties
-git push origin main
-```
-
----
-
-## Проверка версии Node
-
-Эта команда должна вывести версию `20.17.0`:
-
-```properties
+```powershell
 node -v
 ```
 
----
+Ожидаемый результат: `v20.17.0`.
 
-## Два способа установки зависимостей
+Если установлен NVM for Windows, нужную версию можно установить и включить так:
 
-Установка зависимостей через NPM:
+```powershell
+nvm install 20.17.0
+nvm use 20.17.0
+```
 
-```properties
+## Установка и запуск
+
+Открой терминал в папке проекта и выполни:
+
+```powershell
 npm install
-```
-
-Установка зависимостей через Yarn:
-
-```properties
-yarn
-```
-
----
-
-## Два способа запуска приложения
-
-Для запуска веб-сервера с помощью NPM:
-
-```properties
 npm start
 ```
 
-Для запуска веб-сервера с помощью Yarn:
+Webpack запустит локальный сервер. Открой в браузере адрес:
 
-```properties
-yarn start
+```text
+http://localhost:9000/
 ```
 
----
+Чтобы остановить сервер, нажми `Ctrl+C` в терминале.
 
-## Два способа деплоя на GitHub Pages
+## Сборка проекта
 
-### Ваш репозиторий должен быть связан с репозиторием на GitHub. После этого выполните следующие действия:
+Для создания production-сборки выполни:
 
-Деплой на GitHub Pages с помощью NPM:
+```powershell
+npm run build
+```
 
-```properties
+Готовые файлы сборки появятся в папке `dist`.
+
+## Публикация на GitHub Pages
+
+Публикация доступна после подключения проекта к GitHub и настройки GitHub Pages. Выполни:
+
+```powershell
 npm run deploy
 ```
 
-Деплой на GitHub Pages с помощью Yarn:
+Перед публикацией npm автоматически запускает production-сборку.
 
-```properties
-yarn deploy
-```
+## Структура проекта
 
-Основано на [этой статье](https://dev.to/anitaparmar26/webpack-5-guide-for-beginners-314c).
+- `src/index.html` — разметка страницы.
+- `src/scss/style.scss` — основные стили страницы.
+- `src/scss/sidebar.scss` — стили бокового меню.
+- `src/js/index.js` — JavaScript и импорты SCSS.
+- `src/img/` — изображения и иконки.
+- `src/fonts/` — файлы шрифтов.
+- `dist/` — результат production-сборки.
+
+SCSS импортируется из `src/js/index.js` и компилируется Webpack. Отдельно подключать SCSS-файлы через `<link>` в HTML не нужно.
