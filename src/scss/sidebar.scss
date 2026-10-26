@@ -207,7 +207,7 @@ $menu-accent: #41f6d7;
 
 @media (min-width: 1440px) {
   .side-menu {
-    width: 187px;
+    width: 320px;
     padding: 24px 12px;
     transform: translateX(0);
     visibility: visible;
@@ -219,8 +219,7 @@ $menu-accent: #41f6d7;
     left: -12px;
   }
 
-  .side-menu #menu-close,
-  .side-menu .menu-header > .menu-button {
+  .side-menu #menu-close{
     display: none;
   }
 
