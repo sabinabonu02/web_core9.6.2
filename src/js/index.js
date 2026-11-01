@@ -1,5 +1,6 @@
 import '../scss/style.scss'
 import '../scss/sidebar.scss'
+import './brands.js'
 
 const menu = document.querySelector('#side-menu')
 const openButton = document.querySelector('#menu-open')
@@ -86,3 +87,26 @@ document.addEventListener('keydown', (event) => {
 })
 
 syncMenuWithScreenSize()
+const servicesContent = document.querySelector('.services_content')
+const readMoreButton = document.querySelector('.services_content-readMore')
+const readMoreLabel = readMoreButton?.querySelector('span')
+const largeScreen = window.matchMedia('(min-width: 1120px)')
+
+if (servicesContent && readMoreButton && readMoreLabel) {
+  function setDescriptionExpanded(isExpanded) {
+    servicesContent.classList.toggle('is-expanded', isExpanded)
+    readMoreButton.setAttribute('aria-expanded', String(isExpanded))
+    readMoreLabel.textContent = isExpanded ? 'Скрыть' : 'Читать далее'
+  }
+
+  readMoreButton.addEventListener('click', () => {
+    const isExpanded = !servicesContent.classList.contains('is-expanded')
+    setDescriptionExpanded(isExpanded)
+  })
+
+  largeScreen.addEventListener('change', (event) => {
+    setDescriptionExpanded(event.matches)
+  })
+
+  setDescriptionExpanded(largeScreen.matches)
+}

@@ -204,13 +204,16 @@ body {
       line-height: 1.6;
 
       p {
-        display: -webkit-box;
-        overflow: hidden;
         margin-bottom: 16px;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 5;
-        line-clamp: 5;
       }
+
+      p + p {
+        display: none;
+      }
+    }
+
+    &_content.is-expanded .services_content-text p + p {
+      display: block;
     }
 
     &_content-readMore {
@@ -222,6 +225,14 @@ body {
       font: inherit;
       font-weight: 700;
       cursor: pointer;
+
+      img {
+        transition: transform 200ms ease;
+      }
+    }
+
+    &_content.is-expanded .services_content-readMore img {
+      transform: rotate(180deg);
     }
 
     &_image {
@@ -262,10 +273,7 @@ body {
         align-items: flex-start;
       }
 
-      &_content-text p {
-        -webkit-line-clamp: 8;
-        line-clamp: 8;
-      }
+
     }
   }
 
@@ -297,10 +305,6 @@ body {
 
       &_content-text {
         width: 50%;
-
-        p {
-          display: block;
-        }
       }
 
       &_image {

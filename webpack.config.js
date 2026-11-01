@@ -44,6 +44,16 @@ module.exports = {
         ],
       },
 
+      // Обрабатываем обычные CSS-файлы, в том числе стили Swiper
+      {
+        test: /\.css$/i,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
+        ],
+      },
+
       // Подключаем шрифты из css
       {
         test: /\.(eot|ttf|woff|woff2)$/,

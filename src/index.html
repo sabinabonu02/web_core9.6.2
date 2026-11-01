@@ -19,7 +19,8 @@
           type="button"
           aria-label="Открыть меню"
           aria-controls="side-menu"
-          aria-expanded="false">
+          aria-expanded="false"
+        >
           <img src="./img/menu.svg" alt="" />
         </button>
 
@@ -102,7 +103,8 @@
             <button
               class="header_button header_button--desktop"
               type="button"
-              aria-label="Оставить заявку">
+              aria-label="Оставить заявку"
+            >
               <img src="./img/repair.svg" alt="" />
             </button>
           </div>
@@ -111,7 +113,9 @@
             <span class="services_action-text2">Статус ремонта</span>
             <button
               class="header_button header_button--desktop"
-              type="button" aria-label="Проверить статус ремонта">
+              type="button"
+              aria-label="Проверить статус ремонта"
+            >
               <img src="./img/search.svg" alt="" />
             </button>
           </div>
@@ -146,16 +150,21 @@
             официальной гарантией производителя.
           </p>
 
-          <p>
+          <p id="services-extra-text">
             Мы успешно работаем с 1992 года и заслужили репутацию надежного
             партнера, что подтверждает большое количество постоянных клиентов.
             Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
             очередь, советуют нас родным и близким.
           </p>
 
-          <button class="services_content-readMore" type="button">
+          <button
+            class="services_content-readMore"
+            type="button"
+            aria-expanded="false"
+            aria-controls="services-extra-text"
+          >
             <img src="./img/readMore.svg" alt="" />
-            Читать далее
+            <span>Читать далее</span>
           </button>
         </div>
 
@@ -166,6 +175,53 @@
           />
         </div>
       </section>
+
+      <section class="brands" aria-labelledby="brands-title">
+        <h2 class="brands__title" id="brands-title">
+          Ремонт техники различных брендов
+        </h2>
+
+        <div class="swiper brands__swiper">
+          <ul class="swiper-wrapper brands__list" id="brands-list">
+            <li class="swiper-slide brands__item">
+              <img src="./img/1.svg" alt="Samsung" />
+            </li>
+            <li class="swiper-slide brands__item">
+              <img src="./img/2.svg" alt="Lenovo" />
+            </li>
+            <li class="swiper-slide brands__item">
+              <img src="./img/3.svg" alt="ViewSonic" />
+            </li>
+            <li class="swiper-slide brands__item">
+              <img src="./img/4.svg" alt="Bosch" />
+            </li>
+            <li class="swiper-slide brands__item">
+              <img src="./img/5.svg" alt="HP" />
+            </li>
+            <li class="swiper-slide brands__item">
+              <img src="./img/6.svg" alt="Acer" />
+            </li>
+            <li class="swiper-slide brands__item">
+              <img src="./img/7.svg" alt="Sony" />
+            </li>
+            <li class="swiper-slide brands__item">
+              <img src="./img/8.svg" alt="Apple" />
+            </li>
+          </ul>
+
+          <div class="swiper-pagination brands__pagination"></div>
+        </div>
+
+        <button
+          class="brands__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="brands-list"
+        >
+          <img class="brands__toggle-icon" src="./img/expand.svg" alt="" />
+          <span class="brands__toggle-text">Показать все</span>
+        </button>
+      </section>
     </main>
 
     <button
@@ -174,7 +230,8 @@
       type="button"
       aria-label="Закрыть меню"
       hidden
-    ></button>
+    >
+    </button>
 
     <aside
       class="side-menu"
