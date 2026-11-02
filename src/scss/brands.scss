@@ -62,11 +62,11 @@ $brands-accent: #41f6d7;
 
   @media (min-width: 768px) {
     &__title {
-      padding: 24px 32px;
+      padding: 24px;
     }
 
     &__swiper {
-      padding: 8px 24px 16px;
+      padding: 8px 24px 16px 0;
       overflow: visible;
     }
 
@@ -93,7 +93,7 @@ $brands-accent: #41f6d7;
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      margin: 0 24px 24px 32px;
+      margin: 0 24px 24px 24px;
       padding: 0;
       border: 0;
       background: transparent;
@@ -119,17 +119,28 @@ $brands-accent: #41f6d7;
   }
 
   @media (min-width: 1120px) {
+    &__title {
+      padding: 24px 32px;
+    }
+
+    &__swiper {
+      padding-right: 32px;
+      padding-left: 32px;
+    }
+
     &__list {
       grid-template-columns: repeat(4, minmax(0, 1fr));
+
+      &:not(.brands__list--expanded)
+        .brands__item:nth-child(n + 7):nth-child(-n + 8) {
+        display: block;
+      }
+
+      &:not(.brands__list--expanded) .brands__item:nth-child(n + 9) {
+        display: none;
+      }
     }
 
-    &__list:not(.brands__list--expanded) .brands__item:nth-child(n + 7) {
-      display: block;
-    }
-
-    &__toggle {
-      display: none;
-    }
   }
 }
 

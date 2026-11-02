@@ -1,0 +1,241 @@
+$prices-title-color: #7e7e82;
+$prices-pink: #ff3e79;
+$prices-border: #eaeaea;
+$prices-muted: #7e7e82;
+
+.prices {
+  border-top: 1px solid #b8ffec;
+  background: #f8f8f8;
+
+  &__title {
+    margin: 0 0 8px;
+    padding: 16px;
+    color: $prices-title-color;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+
+  &__swiper {
+    width: 100%;
+    padding: 8px 0 44px 16px;
+    overflow: hidden;
+  }
+
+  &__cards {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 260px;
+    min-height: 200px;
+    padding: 16px 16px 72px;
+    border: 1px solid $prices-border;
+    border-radius: 6px;
+    background: #fff;
+  }
+
+  &__label {
+    margin: 0 0 4px;
+    color: $prices-muted;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &__service {
+    margin: 0 0 12px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+
+  &__details {
+    position: absolute;
+    right: 16px;
+    bottom: 52px;
+    left: 16px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+    gap: 8px;
+
+    p {
+      margin: 0;
+      font-size: 12px;
+      line-height: 16px;
+      white-space: nowrap;
+    }
+  }
+
+  &__order {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 96px;
+    min-width: 96px;
+    min-height: 32px;
+    padding: 6px 8px;
+    border-radius: 16px;
+    background: $prices-pink;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  &__details .prices__label {
+    margin-bottom: 2px;
+  }
+
+  &__card &__order {
+    position: absolute;
+    right: 16px;
+    bottom: 12px;
+  }
+
+  &__pagination {
+    bottom: 12px !important;
+
+    .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      margin: 0 6px !important;
+      background: #ddd;
+      opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: #b5b6bc;
+    }
+  }
+
+  &__table-wrap {
+    display: none;
+  }
+
+  &__note {
+    padding: 8px 16px 24px;
+    color: #5e5e63;
+    font-size: 14px;
+    line-height: 20px;
+
+    p {
+      max-width: 760px;
+      margin: 0 0 16px;
+    }
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #1b1c21;
+      font-weight: 500;
+      text-decoration: none;
+
+      &::after {
+        color: $prices-pink;
+        content: '›';
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1;
+      }
+
+      &:hover,
+      &:focus-visible {
+        color: $prices-pink;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    &__title {
+      padding: 24px;
+    }
+
+    &__swiper {
+      display: none;
+    }
+
+    &__table-wrap {
+      display: block;
+      padding: 8px 24px 16px;
+    }
+
+    &__table {
+      width: 100%;
+      border-collapse: collapse;
+      border-radius: 6px;
+      background: #fff;
+      font-size: 14px;
+      text-align: left;
+
+      thead {
+        color: $prices-muted;
+        font-weight: 400;
+      }
+
+      th,
+      td {
+        padding: 12px 16px;
+        border-bottom: 1px solid $prices-border;
+      }
+
+      thead th {
+        font-weight: 400;
+      }
+
+      tbody tr:last-child th,
+      tbody tr:last-child td {
+        border-bottom: 0;
+      }
+
+      tbody th {
+        font-weight: 400;
+      }
+
+      th:last-child,
+      td:last-child {
+        width: 132px;
+        text-align: right;
+      }
+
+      .prices__order {
+        width: 96px;
+        min-width: 96px;
+        font-size: 10px;
+      }
+    }
+
+    &__note {
+      padding: 8px 24px 32px;
+    }
+  }
+
+  @media (min-width: 1120px) {
+    &__title {
+      padding: 24px 32px;
+    }
+
+    &__table-wrap {
+      padding-right: 32px;
+      padding-left: 32px;
+    }
+
+    &__note {
+      padding-right: 32px;
+      padding-left: 32px;
+    }
+  }
+}
+
+
+
+

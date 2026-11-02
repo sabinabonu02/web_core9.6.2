@@ -171,6 +171,8 @@ $menu-accent: #41f6d7;
 
 .lang {
   display: flex;
+  min-width: 0;
+  border: 0;
   gap: 12px;
 
   input {
@@ -219,7 +221,7 @@ $menu-accent: #41f6d7;
     left: -12px;
   }
 
-  .side-menu #menu-close{
+  .side-menu #menu-close {
     display: none;
   }
 

@@ -115,12 +115,13 @@ body {
 
   .services {
     position: relative;
-    padding: 24px;
+    padding: 24px 0 24px;
     border-top: 1px solid $color-accent-border;
 
     &_heading {
       display: flex;
       flex-direction: column;
+      padding: 0 16px;
     }
 
     .block {
@@ -167,6 +168,7 @@ body {
 
     .slideMenu {
       display: flex;
+      padding: 0 16px;
       gap: 16px;
       margin-bottom: 16px;
       overflow-x: auto;
@@ -196,11 +198,13 @@ body {
     &_content {
       display: flex;
       flex-direction: column;
-      gap: 36px;
+      gap: 16px;
+      padding: 36px 16px;
     }
 
     &_content-text {
       flex: 1;
+      min-width: 0;
       line-height: 1.6;
 
       p {
@@ -237,6 +241,8 @@ body {
 
     &_image {
       flex: 1;
+      min-width: 0;
+      margin: 0 -16px;
 
       img {
         display: block;
@@ -268,15 +274,24 @@ body {
     }
 
     .services {
+      &_heading,
+      .slideMenu,
+      &_content {
+        padding-right: 24px;
+        padding-left: 24px;
+      }
+
+      &_image {
+        margin: 0;
+      }
+
       &_content {
         flex-direction: row;
         align-items: flex-start;
+        gap: 36px;
       }
-
-
     }
   }
-
   @media (min-width: 1120px) {
     .services {
       &_heading {
@@ -284,8 +299,11 @@ body {
         align-items: center;
       }
 
-      &_accent {
-        margin-left: -100px;
+      &_heading,
+      .slideMenu,
+      &_content {
+        padding-right: 32px;
+        padding-left: 32px;
       }
 
       &_actions,
@@ -297,10 +315,22 @@ body {
         margin-bottom: 18px;
       }
 
+      &_image {
+        margin: 0;
+      }
+
       &_content {
         flex-direction: row;
         align-items: flex-start;
         gap: 36px;
+      }
+
+      &_content-readMore {
+        display: none;
+      }
+
+      &_content-text p + p {
+        display: block;
       }
 
       &_content-text {
@@ -320,4 +350,59 @@ body {
       display: none;
     }
   }
+}
+
+.site-footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  padding: 16px;
+  border-top: 1px solid #b8ffec;
+  color: #7e7e82;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+
+  &__copyright,
+  &__privacy,
+  &__disclaimer {
+    margin: 0;
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: start;
+    gap: 24px;
+    padding: 24px;
+    text-align: left;
+
+    &__privacy {
+      text-align: center;
+    }
+
+    &__disclaimer {
+      text-align: right;
+    }
+  }
+
+  @media (min-width: 1120px) {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 24px 32px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }

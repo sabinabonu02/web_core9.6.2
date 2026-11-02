@@ -13,36 +13,39 @@ if (brands) {
   const toggleButton = brands.querySelector('.brands__toggle')
   const toggleText = brands.querySelector('.brands__toggle-text')
   const mobileScreen = window.matchMedia('(max-width: 767px)')
+  const pagination = brands.querySelector('.brands__pagination')
 
   let swiper = null
 
   function syncSwiper() {
-    if (mobileScreen.matches && swiper === null) {
+    if (mobileScreen.matches && !swiper && sliderElement && pagination) {
       swiper = new Swiper(sliderElement, {
         modules: [A11y, Pagination],
         slidesPerView: 'auto',
         spaceBetween: 16,
         pagination: {
-          el: brands.querySelector('.brands__pagination'),
+          el: pagination,
           clickable: true
         },
         a11y: {
           paginationBulletMessage: 'Перейти к карточке {{index}}'
         }
       })
-    } else if (!mobileScreen.matches && swiper !== null) {
+    } else if (!mobileScreen.matches && swiper) {
       swiper.destroy(true, true)
       swiper = null
     }
   }
 
-  toggleButton.addEventListener('click', () => {
-    const isExpanded = list.classList.toggle('brands__list--expanded')
+  if (list && toggleButton && toggleText) {
+    toggleButton.addEventListener('click', () => {
+      const isExpanded = list.classList.toggle('brands__list--expanded')
 
-    toggleButton.classList.toggle('brands__toggle--expanded', isExpanded)
-    toggleButton.setAttribute('aria-expanded', String(isExpanded))
-    toggleText.textContent = isExpanded ? 'Скрыть' : 'Показать все'
-  })
+      toggleButton.classList.toggle('brands__toggle--expanded', isExpanded)
+      toggleButton.setAttribute('aria-expanded', String(isExpanded))
+      toggleText.textContent = isExpanded ? 'Скрыть' : 'Показать все'
+    })
+  }
 
   syncSwiper()
   mobileScreen.addEventListener('change', syncSwiper)
