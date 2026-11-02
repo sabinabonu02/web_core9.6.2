@@ -155,6 +155,15 @@
             <li class="swiper-slide brands__item">
               <img src="./img/8.svg" alt="Apple">
             </li>
+            <li class="swiper-slide brands__item">
+              <img src="./img/1.svg" alt="Samsung">
+            </li>
+            <li class="swiper-slide brands__item">
+              <img src="./img/2.svg" alt="Lenovo">
+            </li>
+            <li class="swiper-slide brands__item">
+              <img src="./img/3.svg" alt="ViewSonic">
+            </li>
           </ul>
 
           <div class="swiper-pagination brands__pagination"></div>
@@ -165,10 +174,236 @@
           <span class="brands__toggle-text">Показать все</span>
         </button>
       </section>
-    </main>
 
-    <button class="menu-overlay" id="menu-overlay" type="button" aria-label="Закрыть меню" hidden>
-    </button>
+      <section class="techniques" aria-labelledby="techniques-title">
+        <h2 class="techniques__title" id="techniques-title">
+          Ремонт различных видов техники
+        </h2>
+
+        <div class="swiper techniques__swiper">
+          <ul class="swiper-wrapper techniques__list" id="techniques-list">
+            <li class="swiper-slide techniques__item">
+              <article class="techniques__card">
+                <h3>Ремонт ноутбуков</h3>
+                <span class="techniques__arrow" aria-hidden="true">›</span>
+              </article>
+            </li>
+            <li class="swiper-slide techniques__item">
+              <article class="techniques__card">
+                <h3>Ремонт планшетов</h3>
+                <span class="techniques__arrow" aria-hidden="true">›</span>
+              </article>
+            </li>
+            <li class="swiper-slide techniques__item">
+              <article class="techniques__card">
+                <h3>Ремонт ПК</h3>
+                <span class="techniques__arrow" aria-hidden="true">›</span>
+              </article>
+            </li>
+            <li class="swiper-slide techniques__item">
+              <article class="techniques__card">
+                <h3>Ремонт мониторов</h3>
+                <span class="techniques__arrow" aria-hidden="true">›</span>
+              </article>
+            </li>
+            <li class="swiper-slide techniques__item">
+              <article class="techniques__card">
+                <h3>Ремонт принтеров</h3>
+                <span class="techniques__arrow" aria-hidden="true">›</span>
+              </article>
+            </li>
+          </ul>
+
+          <div class="swiper-pagination techniques__pagination"></div>
+        </div>
+
+        <button class="techniques__toggle" type="button" aria-expanded="false" aria-controls="techniques-list">
+          <img class="techniques__toggle-icon" src="./img/expand.svg" alt="">
+          <span class="techniques__toggle-text">Показать все</span>
+        </button>
+
+      </section>
+
+      <section class="prices" aria-labelledby="prices-title">
+        <h2 class="prices__title" id="prices-title">Цены на услуги</h2>
+
+        <div class="swiper prices__swiper" aria-label="Список цен">
+          <div class="swiper-wrapper prices__cards">
+            <article class="swiper-slide prices__card">
+              <p class="prices__label">Ремонтные услуги</p>
+              <h3 class="prices__service">Диагностика</h3>
+              <div class="prices__details">
+                <div>
+                  <p class="prices__label">Цена</p>
+                  <p>Бесплатно</p>
+                </div>
+                <div>
+                  <p class="prices__label">Срок</p>
+                  <p>30 мин</p>
+                </div>
+              </div>
+              <a class="prices__order" href="mailto:mail@cps.com?subject=Заявка%20на%20ремонт%20—%20Диагностика">
+                Заказать
+              </a>
+            </article>
+
+            <article class="swiper-slide prices__card">
+              <p class="prices__label">Ремонтные услуги</p>
+              <h3 class="prices__service">Замена дисплея</h3>
+              <div class="prices__details">
+                <div>
+                  <p class="prices__label">Цена</p>
+                  <p>1 000 ₽</p>
+                </div>
+                <div>
+                  <p class="prices__label">Срок</p>
+                  <p>30-120 мин</p>
+                </div>
+              </div>
+              <a class="prices__order" href="mailto:mail@cps.com?subject=Заявка%20на%20ремонт%20—%20Замена%20дисплея">
+                Заказать
+              </a>
+            </article>
+
+            <article class="swiper-slide prices__card">
+              <p class="prices__label">Ремонтные услуги</p>
+              <h3 class="prices__service">Замена полифонического динамика</h3>
+              <div class="prices__details">
+                <div>
+                  <p class="prices__label">Цена</p>
+                  <p>1 000 ₽</p>
+                </div>
+                <div>
+                  <p class="prices__label">Срок</p>
+                  <p>30-120 мин</p>
+                </div>
+              </div>
+              <a class="prices__order" href="mailto:mail@cps.com?subject=Заявка%20на%20ремонт%20—%20Замена%20динамика">
+                Заказать
+              </a>
+            </article>
+
+            <article class="swiper-slide prices__card">
+              <p class="prices__label">Ремонтные услуги</p>
+              <h3 class="prices__service">
+                Тестирование с выдачей технического заключения
+              </h3>
+              <div class="prices__details">
+                <div>
+                  <p class="prices__label">Цена</p>
+                  <p>Бесплатно</p>
+                </div>
+                <div>
+                  <p class="prices__label">Срок</p>
+                  <p>30-120 мин</p>
+                </div>
+              </div>
+              <a class="prices__order" href="mailto:mail@cps.com?subject=Заявка%20на%20ремонт%20—%20Тестирование">
+                Заказать
+              </a>
+            </article>
+
+            <article class="swiper-slide prices__card">
+              <p class="prices__label">Ремонтные услуги</p>
+              <h3 class="prices__service">Замена программного обеспечения</h3>
+              <div class="prices__details">
+                <div>
+                  <p class="prices__label">Цена</p>
+                  <p>1 000 ₽</p>
+                </div>
+                <div>
+                  <p class="prices__label">Срок</p>
+                  <p>30-120 мин</p>
+                </div>
+              </div>
+              <a class="prices__order" href="mailto:mail@cps.com?subject=Заявка%20на%20ремонт%20—%20Замена%20ПО">
+                Заказать
+              </a>
+            </article>
+          </div>
+
+          <div class="swiper-pagination prices__pagination"></div>
+        </div>
+
+        <div class="prices__table-wrap">
+          <table class="prices__table">
+            <thead>
+              <tr>
+                <th scope="col">Ремонтные услуги</th>
+                <th scope="col">Цена</th>
+                <th scope="col">Срок</th>
+                <th scope="col">
+                  <span class="visually-hidden">Заказ</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Диагностика</th>
+                <td>Бесплатно</td>
+                <td>30-120 мин</td>
+                <td>
+                  <a class="prices__order" href="mailto:mail@cps.com?subject=Заявка%20на%20ремонт%20—%20Диагностика">Заказать</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Замена дисплея</th>
+                <td>1 000 ₽</td>
+                <td>30-120 мин</td>
+                <td>
+                  <a class="prices__order" href="mailto:mail@cps.com?subject=Заявка%20на%20ремонт%20—%20Замена%20дисплея">Заказать</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Замена полифонического динамика</th>
+                <td>1 000 ₽</td>
+                <td>30-120 мин</td>
+                <td>
+                  <a class="prices__order" href="mailto:mail@cps.com?subject=Заявка%20на%20ремонт%20—%20Замена%20динамика">Заказать</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Тестирование с выдачей технического заключения</th>
+                <td>Бесплатно</td>
+                <td>30-120 мин</td>
+                <td>
+                  <a class="prices__order" href="mailto:mail@cps.com?subject=Заявка%20на%20ремонт%20—%20Тестирование">Заказать</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Замена программного обеспечения</th>
+                <td>1 000 ₽</td>
+                <td>30-120 мин</td>
+                <td>
+                  <a class="prices__order" href="mailto:mail@cps.com?subject=Заявка%20на%20ремонт%20—%20Замена%20ПО">Заказать</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="prices__note">
+          <p>
+            Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную
+            услугу. Для получения коммерческого предложения на постоянное
+            обслуживание оставьте заявку.
+          </p>
+          <a href="mailto:mail@cps.com?subject=Коммерческое%20предложение">
+            Получить коммерческое предложение
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer" aria-label="Информация о сайте">
+      <p class="site-footer__copyright">
+        © 2019 CPS<br>Разработано командой Areposong
+      </p>
+      <p class="site-footer__privacy">Политика конфиденциальности</p>
+      <p class="site-footer__disclaimer">
+        Информация, размещенная на данной странице, не является публичной офертой.
+      </p>
+    </footer>
+    <button class="menu-overlay" id="menu-overlay" type="button" aria-label="Закрыть меню" hidden></button>
 
     <aside class="side-menu" id="side-menu" aria-label="Боковое меню" aria-hidden="true" inert>
       <header class="menu-header">
@@ -190,7 +425,7 @@
       <nav class="menu" aria-label="Основная навигация">
         <ul class="menu-list">
           <li><a href="#">Ремонт техники</a></li>
-          <li><a href="#">Услуги и сервисы</a></li>
+          <li class="is-active"><a href="#" aria-current="page">Услуги и сервисы</a></li>
           <li><a href="#">Корпоративным клиентам</a></li>
           <li><a href="#">Продавцам техники</a></li>
           <li><a href="#">Партнерам</a></li>
@@ -218,7 +453,8 @@
         <a class="email" href="mailto:mail@cps.com">mail@cps.com</a>
         <a class="tel" href="tel:88008908900">8 800 890 8900</a>
 
-        <div class="lang" aria-label="Язык интерфейса">
+        <fieldset class="lang">
+          <legend class="visually-hidden">Язык интерфейса</legend>
           <input type="radio" name="lang" id="lang-ru" checked="checked">
           <label for="lang-ru">RU</label>
 
@@ -227,7 +463,7 @@
 
           <input type="radio" name="lang" id="lang-ch">
           <label for="lang-ch">CH</label>
-        </div>
+        </fieldset>
       </footer>
     </aside>
   </body>
